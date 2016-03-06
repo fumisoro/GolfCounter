@@ -18,13 +18,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1打"
-            android:id="@+id/button" />
+            android:id="@+id/shotButton" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1パッド"
-            android:id="@+id/button2"
+            android:id="@+id/puttButton"
             android:layout_gravity="top" />
 
     </LinearLayout>
@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="0打"
-            android:id="@+id/shotNum"
+            android:id="@+id/shotNumTextView"
             android:textSize="100dp" />
 
         <TextView
@@ -50,7 +50,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="0打"
-            android:id="@+id/puttNum"
+            android:id="@+id/puttNumTextView"
             android:textSize="100dp" />
     </LinearLayout>
 </LinearLayout>
