@@ -41,7 +41,7 @@ public class MainActivity extends Activity {
     }
 
     void applyNumber(){
-        shotNumTextView.setText(shotNumber.getShotNum()+"打");
-        puttNumTextView.setText(shotNumber.getPuttNum()+"打");
+        shotNumTextView.setText(shotNumber.getShotNum()+"ショット");
+        puttNumTextView.setText(shotNumber.getPuttNum()+"パット");
     }
 }
