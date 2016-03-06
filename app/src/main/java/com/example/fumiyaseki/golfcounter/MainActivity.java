@@ -2,6 +2,7 @@ package com.example.fumiyaseki.golfcounter;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -20,5 +21,27 @@ public class MainActivity extends AppCompatActivity {
         shotButton = (Button)findViewById(R.id.shotButton);
         puttNumTextView = (TextView)findViewById(R.id.puttNumTextView);
         puttButton = (Button)findViewById(R.id.puttButton);
+        shotNumber = new ShotNumber();
+
+        shotButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                shotNumber.shot();
+                applyNumber();
+            }
+        });
+
+        puttButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                shotNumber.putt();
+                applyNumber();
+            }
+        });
+    }
+
+    void applyNumber(){
+        shotNumTextView.setText(shotNumber.getShotNum()+"打");
+        puttNumTextView.setText(shotNumber.getPuttNum()+"打");
     }
 }
