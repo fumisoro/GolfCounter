@@ -24,13 +24,13 @@ public class ShotNumber{
     }
 
     int deleteShot(){
-        shotNum -= 1;
+        shotNum = positiveSub(shotNum);
         return shotNum;
     }
 
     int deletePutt(){
-        shotNum -= 1;
-        puttNum -= 1;
+        shotNum = positiveSub(shotNum);
+        puttNum = positiveSub(puttNum);
         return puttNum;
     }
 
@@ -40,5 +40,11 @@ public class ShotNumber{
 
     int getPuttNum(){
         return puttNum;
+    }
+
+    private int positiveSub(int value){
+        value -= 1;
+        if(value < 0) value = 0;
+        return value;
     }
 }
