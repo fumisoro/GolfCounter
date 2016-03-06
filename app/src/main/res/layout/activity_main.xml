@@ -3,14 +3,16 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:weightSum="1">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="72dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:touchscreenBlocksFocus="false"
-        android:transitionGroup="false">
+        android:transitionGroup="false"
+        android:gravity="center_horizontal">
 
         <Button
             android:layout_width="wrap_content"
@@ -27,11 +29,29 @@
 
     </LinearLayout>
 
-    <TextView
-        android:layout_width="317dp"
-        android:layout_height="72dp"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
-        android:id="@+id/textView" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:gravity="center_horizontal"
+        android:layout_weight="0.10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="0打"
+            android:id="@+id/shotNum"
+            android:textSize="100dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="0打"
+            android:id="@+id/puttNum"
+            android:textSize="100dp" />
+    </LinearLayout>
 </LinearLayout>
 
