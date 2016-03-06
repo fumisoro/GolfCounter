@@ -18,6 +18,8 @@ public class MainActivity extends Activity {
     private TextView puttNumTextView;
     private Button shotButton;
     private Button puttButton;
+    private Button deleteShotButton;
+    private Button deleteputtButton;
 
     private Button nextButton;
     private Button beforeButton;
@@ -26,11 +28,13 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        shotNumber = new ShotNumber();
         shotNumTextView = (TextView)findViewById(R.id.shotNumTextView);
         shotButton = (Button)findViewById(R.id.shotButton);
         puttNumTextView = (TextView)findViewById(R.id.puttNumTextView);
         puttButton = (Button)findViewById(R.id.puttButton);
-        shotNumber = new ShotNumber();
+        deleteShotButton = (Button)findViewById(R.id.deleteShotButton);
+        deleteputtButton = (Button)findViewById(R.id.deleteputtButton);
 
         nextButton = (Button)findViewById(R.id.nextButton);
         nextButton.setOnClickListener(new View.OnClickListener() {
@@ -61,6 +65,22 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 shotNumber.putt();
+                applyNumber();
+            }
+        });
+
+        deleteShotButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                shotNumber.deleteShot();
+                applyNumber();
+            }
+        });
+
+        deleteputtButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                shotNumber.deletePutt();
                 applyNumber();
             }
         });

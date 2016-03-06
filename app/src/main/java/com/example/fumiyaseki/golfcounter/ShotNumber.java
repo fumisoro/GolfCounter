@@ -23,6 +23,17 @@ public class ShotNumber{
         return puttNum;
     }
 
+    int deleteShot(){
+        shotNum -= 1;
+        return shotNum;
+    }
+
+    int deletePutt(){
+        shotNum -= 1;
+        puttNum -= 1;
+        return puttNum;
+    }
+
     int getShotNum(){
         return shotNum;
     }
